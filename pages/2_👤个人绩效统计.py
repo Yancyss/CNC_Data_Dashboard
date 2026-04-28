@@ -111,3 +111,7 @@ st.download_button(
     file_name=f"{selected_person}_{selected_month}_绩效统计.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
+
+from utils.time import get_update_time
+update_time = get_update_time(df)
+st.caption(f"📌 数据更新至：{update_time.strftime('%Y-%m-%d %H:%M:%S')}")

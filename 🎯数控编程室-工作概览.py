@@ -303,3 +303,7 @@ with c2:
     st.subheader("24小时分布")
     st.plotly_chart(style(fig), use_container_width=True)
     st.markdown(card_end(), unsafe_allow_html=True)
+
+from utils.time import get_update_time
+update_time = get_update_time(df)
+st.caption(f"📌 数据更新至：{update_time.strftime('%Y-%m-%d %H:%M:%S')}")

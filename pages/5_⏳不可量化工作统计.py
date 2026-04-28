@@ -130,3 +130,6 @@ for i, task in enumerate(tasks):
                 st.rerun()
 
         st.divider()
+from utils.time import show_update_time
+
+show_update_time()

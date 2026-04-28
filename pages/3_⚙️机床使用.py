@@ -145,3 +145,7 @@ fig_heat = px.density_heatmap(
 fig_heat.update_xaxes(tickmode="linear", dtick=1)
 
 st.plotly_chart(fig_heat, width="stretch")
+
+from utils.time import get_update_time
+update_time = get_update_time(df)
+st.caption(f"📌 数据更新至：{update_time.strftime('%Y-%m-%d %H:%M:%S')}")

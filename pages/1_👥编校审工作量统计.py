@@ -156,3 +156,7 @@ pivot_table = workload.pivot_table(
 )
 
 st.dataframe(pivot_table)
+
+from utils.time import get_update_time
+update_time = get_update_time(df)
+st.caption(f"📌 数据更新至：{update_time.strftime('%Y-%m-%d %H:%M:%S')}")

@@ -174,3 +174,7 @@ fig_machine = px.bar(
 fig_machine.update_layout(xaxis_tickangle=-30)
 
 st.plotly_chart(fig_machine, width="stretch")
+
+from utils.time import get_update_time
+update_time = get_update_time(df)
+st.caption(f"📌 数据更新至：{update_time.strftime('%Y-%m-%d %H:%M:%S')}")
